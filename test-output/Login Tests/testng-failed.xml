@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Login Tests]">
+  <test name="p1 test(failed)">
+    <groups>
+      <run>
+        <include name="p1"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.testngtutorial.MyTestNGTutorial.LoginTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="loadPage" invocation-numbers="0"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.testngtutorial.MyTestNGTutorial.LoginTest -->
+    </classes>
+  </test> <!-- p1 test(failed) -->
+  <test name="p2 test(failed)">
+    <groups>
+      <run>
+        <include name="p2"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.testngtutorial.MyTestNGTutorial.LoginTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="loadPage" invocation-numbers="0"/>
+          <include name="filloutEmailFld"/>
+          <include name="filloutPassFld"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.testngtutorial.MyTestNGTutorial.LoginTest -->
+    </classes>
+  </test> <!-- p2 test(failed) -->
+</suite> <!-- Failed suite [Login Tests] -->

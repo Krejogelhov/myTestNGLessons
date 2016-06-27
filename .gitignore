@@ -3,4 +3,6 @@
 .settings/
 .test-output/
 .target/
-/target/
+.idea/
+*.iml
+resources/

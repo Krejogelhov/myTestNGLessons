@@ -17,7 +17,7 @@ public class FacebookData {
 	public static Object[][] login(){
 		return new Object[][]{
 			{"k.i.work@mail.ru", "Feamarth2Facebook", null},
-			{"","123456", "The"}
+			{"","123456", "login_attempt"}
 		};
 	}
 }

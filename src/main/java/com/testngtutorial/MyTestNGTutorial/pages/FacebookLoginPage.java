@@ -1,17 +1,24 @@
 package com.testngtutorial.MyTestNGTutorial.pages;
 
 import org.apache.commons.lang3.StringUtils;
-import org.openqa.selenium.NoSuchElementException;
+//import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+
+import com.testngtutorial.MyTestNGTutorial.utilities.DriverFactory;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.support.FindBy;
 
 public class FacebookLoginPage extends BasePage{
 	
 	public FacebookLoginPage(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
+	}	
+	
+	public boolean checkUrlDetails(WebDriver driver, String text){
+		return StringUtils.contains((CharSequence)driver.getCurrentUrl(), text);
 	}
+	/*
 
 	public static final String PAGE_TITLE = "Войдите на Facebook";
 	public static final String PAGE_URL = "http://www.facebook.com/login.php";
@@ -27,5 +34,5 @@ public class FacebookLoginPage extends BasePage{
 		}
 		
 	}
-
+*/
 }

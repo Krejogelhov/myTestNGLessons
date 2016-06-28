@@ -3,14 +3,6 @@
 .settings/
 .test-output/
 .target/
-<<<<<<< HEAD
-/target/
-
 .idea/
 *.iml
 resources/
-=======
-.idea/
-*.iml
-resources/
->>>>>>> origin/master

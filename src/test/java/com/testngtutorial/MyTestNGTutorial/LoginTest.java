@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.testngtutorial.MyTestNGTutorial.data.FacebookData;
@@ -17,8 +19,8 @@ import com.testngtutorial.MyTestNGTutorial.utilities.DriverFactory;
 
 public class LoginTest {
 	
+	
 	public WebDriver driver;
-	DriverFactory.BrowserType type = DriverFactory.BrowserType.CHROME;
 	public WebDriverWait wait;
 	FacebookMainPage fbMainPage;
 	FacebookLoginPage fbLoginPage;
@@ -26,7 +28,7 @@ public class LoginTest {
 
 	@BeforeClass(alwaysRun = true)
 	public void setup(){		
-		this.driver = DriverFactory.getDriver(type);
+		this.driver = DriverFactory.getDriver(DriverFactory.getBrowserTypeByProperty());
 		wait = new WebDriverWait(driver, 2);
 //		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		fbMainPage = PageFactory.initElements(driver, FacebookMainPage.class);
@@ -45,14 +47,17 @@ public class LoginTest {
 		fbMainPage.loadPage();
 	}
 	
+	
+	@Parameters ({"randomEmail"})
 	@Test(groups={"p2", "fields"}, dependsOnMethods="loadPage")
-	public void filloutEmailFld(){
-		fbMainPage.setText_EmailLogin("anthony.vito11@hotmail.com");		
+	public void filloutEmailFld(@Optional("blabla@gmail.com") String randomEmail){
+		fbMainPage.setText_EmailLogin(randomEmail);		
 	}
 	
+	@Parameters ({"randomEmail"})
 	@Test(groups={"p2", "fields"}, dependsOnMethods="filloutEmailFld")
-	public void filloutPassFld(){
-		fbMainPage.setText_PasswordLogin("123456");
+	public void filloutPassFld(@Optional("justrandompass") String randomPassword){
+		fbMainPage.setText_PasswordLogin(randomPassword);
 	}
 	
 	@Test(groups="p1", dataProviderClass = FacebookData.class, dataProvider = "login")

@@ -2,6 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Login Tests">
+<parameter name="randomEmail" value="av11@hotmail.com"/>
+<parameter name="randomPassword" value="123456"/>
 	<test name="p1 test">
 		<groups>
 			<run>

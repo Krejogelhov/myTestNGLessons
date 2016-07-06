@@ -4,7 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 //import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
-import com.testngtutorial.MyTestNGTutorial.utilities.DriverFactory;
 //import org.openqa.selenium.WebElement;
 //import org.openqa.selenium.support.FindBy;
 
@@ -15,8 +14,8 @@ public class FacebookLoginPage extends BasePage{
 		// TODO Auto-generated constructor stub
 	}	
 	
-	public boolean checkUrlDetails(WebDriver driver, String text){
-		return StringUtils.contains((CharSequence)driver.getCurrentUrl(), text);
+	public boolean isValidUrl(WebDriver driver, String text){
+		return StringUtils.contains(driver.getCurrentUrl(), text);
 	}
 	/*
 

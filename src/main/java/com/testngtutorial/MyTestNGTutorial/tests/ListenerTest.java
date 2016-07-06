@@ -1,7 +1,6 @@
-package com.testngtutorial.MyTestNGTutorial;
+package com.testngtutorial.MyTestNGTutorial.tests;
 
 import org.testng.Assert;
-import org.testng.SkipException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 

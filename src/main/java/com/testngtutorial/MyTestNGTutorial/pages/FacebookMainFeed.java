@@ -6,12 +6,12 @@ import org.openqa.selenium.support.FindBy;
 
 public class FacebookMainFeed extends BasePage{
 	
+	@FindBy(className = "fbxWelcomeBoxName ") WebElement welcomeUsername;
+	
 	public FacebookMainFeed(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
-
-	@FindBy(className = "fbxWelcomeBoxName ") WebElement welcomeUsername;
 	
 	public String getUsernameText(){
 		return welcomeUsername.getText();

@@ -1,4 +1,4 @@
-package com.testngtutorial.MyTestNGTutorial;
+package com.testngtutorial.MyTestNGTutorial.tests;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +15,7 @@ import com.testngtutorial.MyTestNGTutorial.data.FacebookData;
 import com.testngtutorial.MyTestNGTutorial.pages.FacebookLoginPage;
 import com.testngtutorial.MyTestNGTutorial.pages.FacebookMainFeed;
 import com.testngtutorial.MyTestNGTutorial.pages.FacebookMainPage;
+import com.testngtutorial.MyTestNGTutorial.utilities.ClassNameDisplayer;
 import com.testngtutorial.MyTestNGTutorial.utilities.DriverFactory;
 
 public class LoginTest {
@@ -42,22 +43,26 @@ public class LoginTest {
 		driver.close();
 	}
 	
+	@ClassNameDisplayer
 	@Test(groups={"p1", "pageLoads"})
 	public void loadPage(){
 		fbMainPage.loadPage();
+		Assert.assertEquals(driver.getTitle() , fbMainPage.getPageTitle());
 	}
 	
 	
 	@Parameters ({"randomEmail"})
 	@Test(groups={"p2", "fields"}, dependsOnMethods="loadPage")
 	public void filloutEmailFld(@Optional("blabla@gmail.com") String randomEmail){
-		fbMainPage.setText_EmailLogin(randomEmail);		
+		fbMainPage.setTextEmailLogin(randomEmail);
+		Assert.assertEquals(fbMainPage.getFieldEmailLogin().getAttribute("value"), randomEmail);
 	}
 	
 	@Parameters ({"randomEmail"})
 	@Test(groups={"p2", "fields"}, dependsOnMethods="filloutEmailFld")
 	public void filloutPassFld(@Optional("justrandompass") String randomPassword){
-		fbMainPage.setText_PasswordLogin(randomPassword);
+		fbMainPage.setTextPasswordLogin(randomPassword);
+		Assert.assertEquals(fbMainPage.getFieldPasswordLogin().getAttribute("value"), randomPassword);
 	}
 	
 	@Test(groups="p1", dataProviderClass = FacebookData.class, dataProvider = "login")
@@ -66,7 +71,7 @@ public class LoginTest {
 		fbMainPage.loadPage();
 		fbMainPage.login(email, password);
 		if(!StringUtils.isBlank(urlDetails)){
-			boolean result = fbLoginPage.checkUrlDetails(driver, urlDetails);
+			boolean result = fbLoginPage.isValidUrl(driver, urlDetails);
 			Assert.assertTrue(result, "Valid page displayed");
 		}
 		else {

@@ -7,48 +7,81 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class FacebookMainPage extends BasePage {
 	
-	@FindBy (id = "email") WebElement field_EmailLogin;
-	@FindBy (id = "pass") WebElement field_PasswordLogin;
-	@FindBy (css = "#loginbutton>input") WebElement button_Login;
+	@FindBy (id = "email") WebElement fieldEmailLogin;
+	@FindBy (id = "pass") WebElement fieldPasswordLogin;
+	@FindBy (css = "#loginbutton>input") WebElement buttonLogin;
 	
-	@FindBy (id = "day") WebElement dropdown_Day;
-	@FindBy (id = "month") WebElement dropdown_Month;
-	@FindBy (id = "year") WebElement dropdown_Year;
+	@FindBy (id = "day") WebElement dropdownDay;
+	@FindBy (id = "month") WebElement dropdownMonth;
+	@FindBy (id = "year") WebElement dropdownYear;
 	
-	public FacebookMainPage(WebDriver driver){
-		super(driver);
-		this.PAGE_TITLE = "Facebook - Log In or Sign Up";
-		this.PAGE_URL = "http://www.facebook.com";
+	private String title = "Facebook - Log In or Sign Up";
+	private String url = "http://www.facebook.com";
+	
+	// Get methods	
+
+	public WebElement getFieldEmailLogin() {
+		return fieldEmailLogin;
+	}
+
+	public WebElement getFieldPasswordLogin() {
+		return fieldPasswordLogin;
+	}
+
+	public WebElement getButtonLogin() {
+		return buttonLogin;
+	}
+
+	public WebElement getDropdownDay() {
+		return dropdownDay;
+	}
+
+	public WebElement getDropdownMonth() {
+		return dropdownMonth;
+	}
+
+	public WebElement getDropdownYear() {
+		return dropdownYear;
 	}
 	
+	// Constructor
+
+	public FacebookMainPage(WebDriver driver){
+		super(driver);
+		setPageUrl(url);
+		setPageTitle(title);		
+	}
+
+	// Interaction methods
+	
 	public void login(String email, String password) {
-		wait.until(ExpectedConditions.elementToBeClickable(field_EmailLogin));
-		setText_EmailLogin(email);
-		setText_PasswordLogin(password);
+		getWait().until(ExpectedConditions.elementToBeClickable(fieldEmailLogin));
+		setTextEmailLogin(email);
+		setTextPasswordLogin(password);
 		clickLoginMain();
 	}
 	
-	public void setText_EmailLogin(String text){
-		setElementText(field_EmailLogin, text);
+	public void setTextEmailLogin(String text){
+		setElementText(fieldEmailLogin, text);
 	}
 	
-	public void setText_PasswordLogin(String text){
-		setElementText(field_PasswordLogin, text);
+	public void setTextPasswordLogin(String text){
+		setElementText(fieldPasswordLogin, text);
 	}
 	
 	public void clickLoginMain(){
-		clickElement(button_Login);
+		clickElement(buttonLogin);
 	}
 	
 	public void selectBDayDay(String value){
-		selectValueInDropdown(dropdown_Day, value);
+		selectValueInDropdown(dropdownDay, value);
 	}
 	
 	public void selectBDayMonth(String value){
-		selectValueInDropdown(dropdown_Month, value);
+		selectValueInDropdown(dropdownMonth, value);
 	}
 	
 	public void selectBDayYear(String value){
-		selectValueInDropdown(dropdown_Year, value);
+		selectValueInDropdown(dropdownYear, value);
 	}
 }

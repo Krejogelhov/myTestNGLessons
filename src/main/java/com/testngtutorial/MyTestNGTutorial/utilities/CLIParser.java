@@ -5,14 +5,16 @@ import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
+import org.apache.http.util.Args;
 
+import com.testngtutorial.MyTestNGTutorial.runner.Runner;
 import com.testngtutorial.MyTestNGTutorial.utilities.DriverFactory.BrowserType;
 
 public class CLIParser {
 	
 	public static BrowserType parse(Options options) {
 		CommandLineParser parser = new DefaultParser();
-		BrowserType type = null;
+		BrowserType type = null;		
 		try {
 			CommandLine cmd = parser.parse(options, null);
 			if(cmd.hasOption("c")) {

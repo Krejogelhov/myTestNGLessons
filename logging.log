@@ -2,3 +2,6 @@
 2016-07-05 12:44:30 INFO  Runner:63 - TestNG runner is working
 2016-07-05 14:34:49 INFO  Runner:48 - Name of the class is com.testngtutorial.MyTestNGTutorial.tests.LoginTest
 2016-07-05 14:35:06 INFO  Runner:63 - TestNG runner is working
+2016-07-07 14:31:45 INFO  Runner:49 - Name of the class is com.testngtutorial.MyTestNGTutorial.tests.LoginTest
+2016-07-07 14:32:03 INFO  Runner:64 - TestNG runner is working
+2016-07-07 14:32:03 INFO  Runner:14 - Shutdown hook initiated

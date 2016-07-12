@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
     <classes>
-      <class name="com.testngtutorial.MyTestNGTutorial.tests.YandexSearchTest">
+      <class name="com.testngtutorial.MyTestNGTutorial.tests.LoginTest">
         <methods>
-          <include name="searchBoxEntry" invocation-numbers="0"/>
           <include name="setup"/>
+          <include name="testLoginMainPage" invocation-numbers="0"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.testngtutorial.MyTestNGTutorial.tests.YandexSearchTest -->
+      </class> <!-- com.testngtutorial.MyTestNGTutorial.tests.LoginTest -->
+      <class name="com.testngtutorial.MyTestNGTutorial.tests.ListenerTest">
+        <methods>
+          <include name="Test2Skip"/>
+          <include name="Test2Fail"/>
+        </methods>
+      </class> <!-- com.testngtutorial.MyTestNGTutorial.tests.ListenerTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

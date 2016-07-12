@@ -3,42 +3,23 @@ package com.testngtutorial.MyTestNGTutorial.runner;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
-//import java.util.concurrent.ExecutorService;
-//import java.util.concurrent.Executors;
 
 import org.apache.log4j.Logger;
-//import org.omg.CORBA.PUBLIC_MEMBER;
 import org.testng.TestNG;
 import org.testng.xml.XmlSuite;
+
 import com.testngtutorial.MyTestNGTutorial.tests.LoginTest;
 import com.testngtutorial.MyTestNGTutorial.utilities.ClassNameDisplayer;
 import com.testngtutorial.MyTestNGTutorial.utilities.ShutdownHookAdder;
 
-public class Runner implements Runnable{
+public class ExpandedRunner implements Runnable{
 	
-	final static Logger LOG = Logger.getLogger(Runner.class);
-	
-	/*
+	final static Logger LOG = Logger.getLogger(ExpandedRunner.class);
 
-	public static void main(String[] args) {
-		
-		final TestNG testNG = new TestNG(true);
-		  final Parser parser = new Parser("src/main/resources/testng.xml");
-		  List<XmlSuite> suites = null;
-		  try {
-			  suites = parser.parseToList();
-		  } catch (ParserConfigurationException | SAXException | IOException e) {
-			  // TODO Auto-generated catch block
-			  e.printStackTrace();
-		  }
-		  testNG.setXmlSuites(suites);
-		  testNG.run();
-		  
-	}
-	*/
+	@Override
 	public void run() {
-        	
-        TestNG tng = new TestNG();
+		
+		TestNG tng = new TestNG();
         
         String name = null;
         
@@ -63,10 +44,12 @@ public class Runner implements Runnable{
 
         List<XmlSuite> suites = new ArrayList<XmlSuite>();
         suites.add(suite);
-        tng.setXmlSuites(suites);
+        tng.setXmlSuites(suites);     
+        
         tng.run();
         LOG.info("TestNG runner is working");
         ShutdownHookAdder hookAdder = new ShutdownHookAdder();
         hookAdder.attachShutDownHook();       
-    }
+	}
+
 }

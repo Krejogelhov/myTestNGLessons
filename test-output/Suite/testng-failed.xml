@@ -7,10 +7,7 @@
         <methods>
           <include name="setup"/>
           <include name="testLoginMainPage" invocation-numbers="0"/>
-          <include name="loadPage"/>
-          <include name="filloutEmailFld"/>
           <include name="teardown"/>
-          <include name="filloutPassFld"/>
         </methods>
       </class> <!-- com.testngtutorial.MyTestNGTutorial.tests.LoginTest -->
       <class name="com.testngtutorial.MyTestNGTutorial.tests.ListenerTest">

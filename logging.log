@@ -5,3 +5,18 @@
 2016-07-07 14:31:45 INFO  Runner:49 - Name of the class is com.testngtutorial.MyTestNGTutorial.tests.LoginTest
 2016-07-07 14:32:03 INFO  Runner:64 - TestNG runner is working
 2016-07-07 14:32:03 INFO  Runner:14 - Shutdown hook initiated
+2016-07-12 11:33:59 INFO  Runner:52 - Name of the class is com.testngtutorial.MyTestNGTutorial.tests.LoginTest
+2016-07-12 11:34:00 INFO  Runner:68 - TestNG runner is working
+2016-07-12 11:34:09 INFO  ExpandedRunner:33 - Name of the class is com.testngtutorial.MyTestNGTutorial.tests.LoginTest
+2016-07-12 11:34:09 INFO  ExpandedRunner:49 - TestNG runner is working
+2016-07-12 11:49:56 INFO  Runner:52 - Name of the class is com.testngtutorial.MyTestNGTutorial.tests.LoginTest
+2016-07-12 11:49:56 INFO  Runner:68 - TestNG runner is working
+2016-07-12 11:50:04 INFO  Runner:14 - Shutdown hook initiated
+2016-07-12 11:50:17 INFO  Runner:52 - Name of the class is com.testngtutorial.MyTestNGTutorial.tests.LoginTest
+2016-07-12 11:50:27 INFO  ExpandedRunner:33 - Name of the class is com.testngtutorial.MyTestNGTutorial.tests.LoginTest
+2016-07-12 11:50:50 INFO  Runner:68 - TestNG runner is working
+2016-07-12 11:50:51 INFO  ExpandedRunner:49 - TestNG runner is working
+2016-07-12 13:00:35 INFO  Runner:52 - Name of the class is com.testngtutorial.MyTestNGTutorial.tests.LoginTest
+2016-07-12 13:00:45 INFO  ExpandedRunner:38 - Name of the class is com.testngtutorial.MyTestNGTutorial.tests.LoginTest
+2016-07-12 13:00:57 INFO  Runner:68 - TestNG runner is working
+2016-07-12 13:00:57 INFO  ExpandedRunner:67 - TestNG runner is working

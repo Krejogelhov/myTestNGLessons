@@ -1,6 +1,11 @@
 package com.testngtutorial.MyTestNGTutorial.tests;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+
 import org.apache.commons.lang3.StringUtils;
+import org.eclipse.persistence.jaxb.MarshallerProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -10,6 +15,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.xml.XmlSuite;
 
 import com.testngtutorial.MyTestNGTutorial.data.FacebookData;
 import com.testngtutorial.MyTestNGTutorial.pages.FacebookLoginPage;
@@ -55,7 +61,7 @@ public class LoginTest {
 	@Test(groups={"p2", "fields"}, dependsOnMethods="loadPage")
 	public void filloutEmailFld(@Optional("blabla@gmail.com") String randomEmail){
 		fbMainPage.setTextEmailLogin(randomEmail);
-		Assert.assertEquals(fbMainPage.getFieldEmailLogin().getAttribute("value"), randomEmail);
+		Assert.assertEquals(fbMainPage.getFieldEmailLogin().getAttribute("value"), randomEmail);		
 	}
 	
 	@Parameters ({"randomEmail"})
@@ -76,6 +82,16 @@ public class LoginTest {
 		}
 		else {
 			Assert.assertTrue(!fbMainFeed.getUsernameText().isEmpty());
+		}
+		try {        	
+			JAXBContext jc = JAXBContext.newInstance(FacebookMainPage.class);	
+			Marshaller marshaller = jc.createMarshaller();
+			marshaller.setProperty(MarshallerProperties.MEDIA_TYPE, "application/json");
+			marshaller.setProperty(MarshallerProperties.JSON_INCLUDE_ROOT, true);
+			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+			marshaller.marshal(fbMainPage, System.out);
+		} catch (JAXBException e) {
+			e.printStackTrace();
 		}
 
 		

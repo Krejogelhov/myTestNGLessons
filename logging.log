@@ -20,3 +20,9 @@
 2016-07-12 13:00:45 INFO  ExpandedRunner:38 - Name of the class is com.testngtutorial.MyTestNGTutorial.tests.LoginTest
 2016-07-12 13:00:57 INFO  Runner:68 - TestNG runner is working
 2016-07-12 13:00:57 INFO  ExpandedRunner:67 - TestNG runner is working
+2016-07-12 17:42:57 INFO  Runner:14 - Shutdown hook initiated
+2016-07-12 17:42:57 INFO  Runner:14 - Shutdown hook initiated
+2016-07-12 17:42:59 INFO  Runner:14 - Shutdown hook initiated
+2016-07-12 17:42:59 INFO  Runner:14 - Shutdown hook initiated
+2016-07-12 17:43:01 INFO  Runner:14 - Shutdown hook initiated
+2016-07-12 17:43:01 INFO  Runner:14 - Shutdown hook initiated

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.testngtutorial.MyTestNGTutorial.tests.YandexSearchTest">
+      <class name="com.testngtutorial.MyTestNGTutorial.tests.YandexMailTest">
         <methods>
-          <include name="searchBoxEntry" invocation-numbers="0"/>
-          <include name="setup"/>
           <include name="teardown"/>
+          <include name="setup"/>
+          <include name="getBodyBox"/>
         </methods>
-      </class> <!-- com.testngtutorial.MyTestNGTutorial.tests.YandexSearchTest -->
+      </class> <!-- com.testngtutorial.MyTestNGTutorial.tests.YandexMailTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

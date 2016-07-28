@@ -22,7 +22,6 @@ public class YandexStartPage {
         searchBox.search(request);
     }
 	
-	
 	public String getPageUrl() {
 		return url;
 	}

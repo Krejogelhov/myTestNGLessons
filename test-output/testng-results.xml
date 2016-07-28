@@ -1,45 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22651" started-at="2016-07-12T10:05:56Z" finished-at="2016-07-12T10:06:19Z">
+  <suite name="Default suite" duration-ms="27456" started-at="2016-07-22T15:41:23Z" finished-at="2016-07-22T15:41:50Z">
     <groups>
       <group name="p1">
-        <method signature="LoginTest.loadPage()[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="loadPage" class="com.testngtutorial.MyTestNGTutorial.tests.LoginTest"/>
-        <method signature="LoginTest.testLoginMainPage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="testLoginMainPage" class="com.testngtutorial.MyTestNGTutorial.tests.LoginTest"/>
+        <method signature="YandexMailTest.getBodyBox(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.YandexMailTest@ae45eb6]" name="getBodyBox" class="com.testngtutorial.MyTestNGTutorial.tests.YandexMailTest"/>
       </group> <!-- p1 -->
-      <group name="p2">
-        <method signature="LoginTest.filloutEmailFld(java.lang.String)[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="filloutEmailFld" class="com.testngtutorial.MyTestNGTutorial.tests.LoginTest"/>
-        <method signature="LoginTest.filloutPassFld(java.lang.String)[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="filloutPassFld" class="com.testngtutorial.MyTestNGTutorial.tests.LoginTest"/>
-      </group> <!-- p2 -->
-      <group name="fields">
-        <method signature="LoginTest.filloutEmailFld(java.lang.String)[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="filloutEmailFld" class="com.testngtutorial.MyTestNGTutorial.tests.LoginTest"/>
-        <method signature="LoginTest.filloutPassFld(java.lang.String)[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="filloutPassFld" class="com.testngtutorial.MyTestNGTutorial.tests.LoginTest"/>
-      </group> <!-- fields -->
-      <group name="pageLoads">
-        <method signature="LoginTest.loadPage()[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="loadPage" class="com.testngtutorial.MyTestNGTutorial.tests.LoginTest"/>
-      </group> <!-- pageLoads -->
     </groups>
-    <test name="Default test" duration-ms="22651" started-at="2016-07-12T10:05:56Z" finished-at="2016-07-12T10:06:19Z">
-      <class name="com.testngtutorial.MyTestNGTutorial.tests.LoginTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="setup" is-config="true" duration-ms="9497" started-at="2016-07-12T13:05:56Z" finished-at="2016-07-12T13:06:05Z">
+    <test name="Default test" duration-ms="27456" started-at="2016-07-22T15:41:23Z" finished-at="2016-07-22T15:41:50Z">
+      <class name="com.testngtutorial.MyTestNGTutorial.tests.YandexMailTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.YandexMailTest@ae45eb6]" name="setup" is-config="true" duration-ms="10146" started-at="2016-07-22T18:41:23Z" finished-at="2016-07-22T18:41:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loadPage()[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="loadPage" duration-ms="1642" started-at="2016-07-12T13:06:05Z" finished-at="2016-07-12T13:06:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadPage -->
-        <test-method status="PASS" signature="testLoginMainPage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="testLoginMainPage" duration-ms="7239" started-at="2016-07-12T13:06:07Z" data-provider="login" finished-at="2016-07-12T13:06:14Z">
+        <test-method status="PASS" signature="getBodyBox(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.YandexMailTest@ae45eb6]" name="getBodyBox" duration-ms="17280" started-at="2016-07-22T18:41:33Z" data-provider="login" finished-at="2016-07-22T18:41:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[k.i.work@mail.ru]]>
+                <![CDATA[a.d.black@yandex.by]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Feamarth2Facebook]]>
+                <![CDATA[d00msday]]>
               </value>
             </param>
             <param index="2">
@@ -48,55 +32,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginMainPage -->
-        <test-method status="PASS" signature="testLoginMainPage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="testLoginMainPage" duration-ms="3048" started-at="2016-07-12T13:06:14Z" data-provider="login" finished-at="2016-07-12T13:06:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[login_attempt]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginMainPage -->
-        <test-method status="PASS" signature="filloutEmailFld(java.lang.String)[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="filloutEmailFld" duration-ms="1045" started-at="2016-07-12T13:06:17Z" depends-on-methods="com.testngtutorial.MyTestNGTutorial.tests.LoginTest.loadPage" finished-at="2016-07-12T13:06:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[blabla@gmail.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- filloutEmailFld -->
-        <test-method status="PASS" signature="filloutPassFld(java.lang.String)[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="filloutPassFld" duration-ms="132" started-at="2016-07-12T13:06:18Z" depends-on-methods="com.testngtutorial.MyTestNGTutorial.tests.LoginTest.filloutEmailFld" finished-at="2016-07-12T13:06:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[justrandompass]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- filloutPassFld -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.LoginTest@27efef64]" name="teardown" is-config="true" duration-ms="10" started-at="2016-07-12T13:06:19Z" finished-at="2016-07-12T13:06:19Z">
+        </test-method> <!-- getBodyBox -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.testngtutorial.MyTestNGTutorial.tests.YandexMailTest@ae45eb6]" name="teardown" is-config="true" duration-ms="11" started-at="2016-07-22T18:41:50Z" finished-at="2016-07-22T18:41:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.testngtutorial.MyTestNGTutorial.tests.LoginTest -->
+      </class> <!-- com.testngtutorial.MyTestNGTutorial.tests.YandexMailTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

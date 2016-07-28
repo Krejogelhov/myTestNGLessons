@@ -69,7 +69,7 @@ public class BasePage {
 	}
 	
 	public void setElementText(WebElement element, String text) {
-		element.clear();
+		//element.clear();
 		element.sendKeys(text);		
 	}
 
